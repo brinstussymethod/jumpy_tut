@@ -34,6 +34,9 @@ def move(self):
 clock.tick(FPS)
 jumpy.move()
 
-
+#don't forget to change in player
+def draw(self):
+    screen.blit(pygame.transform.flip(self.image, self.flip, False), (self.rect.x - 12, self.rect.y - 5))
+    pygame.draw.rect(screen, WHITE, self.rect, 2)
 
 """
